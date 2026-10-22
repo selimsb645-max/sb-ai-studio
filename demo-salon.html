@@ -59,12 +59,10 @@ footer{padding:30px 0;text-align:center;color:var(--mut);font-size:.85rem}
 <section id="book" class="book"><div class="wrap">
 <h2 style="color:#fff">Book Online — Real-Time Slots</h2>
 <p style="color:#d8bccb;margin-bottom:20px">Pick a service and time. You'll get instant confirmation by email.</p>
-<form action="https://formsubmit.co/selimsb645@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="DEMO TEST — Glow Salon booking">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://selimsb645-max.github.io/sb-ai-studio/demo-salon.html?sent=1#book">
+<form id="bookForm">
 <label>Service</label><select name="service"><option>Cut &amp; Style</option>
 <option>Manicure &amp; Gel</option><option>Glow Facial</option><option>Bridal Package</option></select>
+<input type="text" name="company" style="display:none" tabindex="-1" autocomplete="off">
 <label>Your name</label><input name="name" required placeholder="Jane Smith">
 <label>Email</label><input type="email" name="email" required placeholder="jane@email.com">
 <label>Preferred date &amp; time</label><input type="datetime-local" name="datetime">
@@ -79,6 +77,20 @@ footer{padding:30px 0;text-align:center;color:var(--mut);font-size:.85rem}
 <p class="sub">📍 78 Rosewood Avenue, Springfield &nbsp;•&nbsp; 🕘 Tue–Sun 9 AM – 7 PM<br>📞 (555) 789-3345 &nbsp;•&nbsp; ✉️ hello@glowsalon.demo</p>
 </div></section>
 <footer><div class="wrap">© 2026 Glow Beauty Salon — Demo website built by SB AI Studio</div></footer>
-<script>if(new URLSearchParams(location.search).get('sent')==='1'){alert('✓ Booking sent! Check the SB AI Studio inbox — this is how your real bookings would arrive.');}</script>
+<script>
+document.getElementById('bookForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  var f = e.target, btn = f.querySelector('button');
+  btn.disabled = true; btn.textContent = 'Sending...';
+  try {
+    var r = await fetch('https://solas-5609a435.base44.app/functions/sbaistudioLead', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({name:f.name.value, email:f.email.value, message:'BOOKING: ' + f.service.value + ' @ ' + f.datetime.value, company:f.company.value, source:'demo-salon-booking', business:'Glow Beauty Salon (demo)'})});
+    var j = await r.json();
+    if(j.ok){ f.reset(); alert('✓ Booking sent! This exact notification is how YOUR bookings would reach you — tested live by SB AI Studio.'); }
+    else { alert('Please check your name and email.'); }
+  } catch(err) { alert('Network error'); }
+  btn.disabled = false; btn.textContent = 'Confirm Booking';
+});
+</script>
 </body>
 </html>

@@ -63,10 +63,8 @@ footer{padding:30px 0;text-align:center;color:var(--mut);font-size:.85rem}
 <section id="order" class="order"><div class="wrap">
 <h2 style="color:#fff">Order Ahead — Skip the Line</h2>
 <p style="color:#cbb89f;margin-bottom:20px">Tell us what you'd like — your order is confirmed by email and ready in 20 minutes.</p>
-<form action="https://formsubmit.co/selimsb645@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="DEMO TEST — Sunrise Bakery order">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://selimsb645-max.github.io/sb-ai-studio/demo-restaurant.html?sent=1#order">
+<form id="orderForm">
+<input type="text" name="company" style="display:none" tabindex="-1" autocomplete="off">
 <label>Your name</label><input name="name" required placeholder="Jane Smith">
 <label>Email</label><input type="email" name="email" required placeholder="jane@email.com">
 <label>What would you like?</label><textarea name="order" rows="3" placeholder="1x Sourdough Loaf, 6x Red Velvet Cupcakes..."></textarea>
@@ -80,6 +78,20 @@ footer{padding:30px 0;text-align:center;color:var(--mut);font-size:.85rem}
 <p class="sub">📍 214 Maple Street, Springfield &nbsp;•&nbsp; 🕕 Mon–Sat 6:30 AM – 6 PM<br>📞 (555) 214-8890 &nbsp;•&nbsp; ✉️ hello@sunrisebakery.demo</p>
 </div></section>
 <footer><div class="wrap">© 2026 Sunrise Bakery — Demo website built by SB AI Studio</div></footer>
-<script>if(new URLSearchParams(location.search).get('sent')==='1'){alert('✓ Order sent! Check the SB AI Studio inbox — this is how your real orders would arrive.');}</script>
+<script>
+document.getElementById('orderForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  var f = e.target, btn = f.querySelector('button');
+  btn.disabled = true; btn.textContent = 'Sending...';
+  try {
+    var r = await fetch('https://solas-5609a435.base44.app/functions/sbaistudioLead', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({name:f.name.value, email:f.email.value, message:'ORDER: ' + f.order.value, company:f.company.value, source:'demo-restaurant-order', business:'Sunrise Bakery (demo)'})});
+    var j = await r.json();
+    if(j.ok){ f.reset(); alert('✓ Order sent! This exact email-style notification is how YOUR orders would reach you — tested live by SB AI Studio.'); }
+    else { alert('Please check your name and email.'); }
+  } catch(err) { alert('Network error'); }
+  btn.disabled = false; btn.textContent = 'Place Order';
+});
+</script>
 </body>
 </html>

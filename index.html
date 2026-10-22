@@ -213,11 +213,8 @@ footer{border-top:1px solid #232a44;padding:30px 0;text-align:center;color:var(-
 <a class="ccard" href="https://t.me/bdadmin69x" target="_blank" rel="noopener"><div class="ic">✈️</div><b>Telegram</b><p>@bdadmin69x</p><p style="color:var(--acc2)">Message us on Telegram →</p></a>
 <a class="ccard" href="mailto:selimsb645@gmail.com?subject=Project%20Inquiry%20-%20SB%20AI%20Studio"><div class="ic">✉️</div><b>Email</b><p>selimsb645@gmail.com</p><p style="color:var(--acc2)">Send us an email →</p></a>
 </div>
-<form id="cform" action="https://formsubmit.co/selimsb645@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="New inquiry from SB AI Studio website">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_next" value="https://selimsb645-max.github.io/sb-ai-studio/?sent=1#contact">
+<form id="cform">
+<input type="text" name="company" style="display:none" tabindex="-1" autocomplete="off">
 <label>Your name</label><input name="name" required placeholder="Jane Smith">
 <label>Email</label><input type="email" name="email" required placeholder="jane@email.com">
 <label>Business name (optional)</label><input name="business" placeholder="Jane's Bakery">
@@ -232,6 +229,20 @@ footer{border-top:1px solid #232a44;padding:30px 0;text-align:center;color:var(-
 <b>SB AI STUDIO</b> — Web Development • AI Automation • Business Solutions<br>
 © 2026 SB AI Studio. Websites, AI assistants &amp; digital growth for small businesses worldwide.
 </div></footer>
-<script>if(new URLSearchParams(location.search).get('sent')==='1'){document.getElementById('thanks').style.display='block';document.getElementById('cform').style.borderColor='var(--acc2)';}</script>
+<script>
+document.getElementById('cform').addEventListener('submit', async function(e){
+  e.preventDefault();
+  var f = e.target, btn = f.querySelector('button');
+  btn.disabled = true; btn.textContent = 'Sending...';
+  try {
+    var r = await fetch('https://solas-5609a435.base44.app/functions/sbaistudioLead', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({name:f.name.value, email:f.email.value, business:f.business.value, package:f.package.value, message:f.message.value, company:f.company.value, source:'main-site-contact'})});
+    var j = await r.json();
+    if(j.ok){ f.reset(); document.getElementById('thanks').style.display='block'; f.style.borderColor='var(--acc2)'; }
+    else { alert('Please check your name and email, then try again.'); }
+  } catch(err) { alert('Network error — please email us directly at selimsb645@gmail.com'); }
+  btn.disabled = false; btn.textContent = 'Send Inquiry';
+});
+</script>
 </body>
 </html>
