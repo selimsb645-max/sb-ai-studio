@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SB AI Studio — Your One-Stop Digital Partner</title>
+<meta name="description" content="SB AI Studio builds affordable websites, AI chat assistants, business automation, Telegram bots, Google Business Profile setup and digital content for small businesses. Free no-obligation demo.">
+<meta name="keywords" content="web development, AI chatbot, business automation, telegram bot, google business profile, digital marketing, small business website, booking system, online ordering">
+<style>
+:root{--bg:#0b0d17;--card:#131729;--card2:#1a2038;--txt:#e8ebf5;--mut:#9aa3c0;--acc:#6c5ce7;--acc2:#00cec9;--grad:linear-gradient(135deg,#6c5ce7,#00cec9)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(11,13,23,.92);backdrop-filter:blur(8px);border-bottom:1px solid #232a44}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1100px;margin:0 auto}
+.logo{font-size:1.35rem;font-weight:800;letter-spacing:.5px;text-decoration:none;color:var(--txt)}
+.logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.navlinks a{color:var(--mut);text-decoration:none;margin-left:22px;font-size:.95rem}
+.navlinks a:hover{color:var(--txt)}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-weight:600;text-decoration:none;transition:.25s;border:none;cursor:pointer;font-size:1rem}
+.btn-grad{background:var(--grad);color:#fff}
+.btn-grad:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(108,92,231,.35)}
+.btn-out{border:1px solid #39406a;color:var(--txt)}
+.btn-out:hover{border-color:var(--acc2);color:var(--acc2)}
+header{padding:90px 0 70px;text-align:center;background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(108,92,231,.25),transparent),radial-gradient(ellipse 60% 40% at 80% 30%,rgba(0,206,201,.12),transparent)}
+h1{font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.15;font-weight:800}
+h1 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mut);max-width:640px;margin:20px auto 34px;font-size:1.12rem}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+section{padding:70px 0}
+.sec-title{text-align:center;font-size:2rem;font-weight:800;margin-bottom:10px}
+.sec-sub{text-align:center;color:var(--mut);margin-bottom:45px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid #232a44;border-radius:14px;padding:28px;transition:.25s}
+.card:hover{border-color:var(--acc);transform:translateY(-4px)}
+.card h3{font-size:1.15rem;margin:14px 0 8px}
+.card p{color:var(--mut);font-size:.95rem}
+.ic{width:46px;height:46px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+.price{color:var(--acc2);font-weight:700;margin-top:10px;font-size:.92rem}
+.packs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.pack{background:var(--card);border:1px solid #232a44;border-radius:14px;padding:28px;display:flex;flex-direction:column}
+.pack.hot{border-color:var(--acc);position:relative;box-shadow:0 0 40px rgba(108,92,231,.18)}
+.badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--grad);color:#fff;font-size:.75rem;font-weight:700;padding:4px 14px;border-radius:20px;white-space:nowrap}
+.pack h3{font-size:1.2rem}
+.pack .p{font-size:1.55rem;font-weight:800;margin:8px 0 16px}
+.pack ul{list-style:none;margin-bottom:22px;flex:1}
+.pack li{padding:7px 0;color:var(--mut);font-size:.93rem;border-bottom:1px dashed #232a44}
+.pack li::before{content:"✓ ";color:var(--acc2);font-weight:700}
+.wgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;text-align:center}
+.wcard{background:var(--card2);border-radius:12px;padding:26px 18px}
+.wcard b{display:block;font-size:1.05rem;margin-top:10px}
+.wcard span{color:var(--mut);font-size:.9rem}
+.contact{background:radial-gradient(ellipse 70% 80% at 50% 120%,rgba(108,92,231,.2),transparent)}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:36px}
+.ccard{background:var(--card);border:1px solid #232a44;border-radius:14px;padding:30px;text-align:center;text-decoration:none;color:var(--txt);transition:.25s}
+.ccard:hover{border-color:var(--acc2);transform:translateY(-4px)}
+.ccard .ic{margin:0 auto 14px}
+.ccard p{color:var(--mut);font-size:.9rem}
+.ccard b{font-size:1.02rem;word-break:break-all}
+footer{border-top:1px solid #232a44;padding:30px 0;text-align:center;color:var(--mut);font-size:.88rem}
+@media(max-width:640px){.navlinks{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="nav-in">
+<a class="logo" href="#">SB <span>AI</span> STUDIO</a>
+<div class="navlinks"><a href="#services">Services</a><a href="#packages">Packages</a><a href="#why">Why Us</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<header><div class="wrap">
+<h1>Websites &amp; AI Solutions<br>That <span class="hl">Grow Your Business</span></h1>
+<p class="sub">SB AI Studio is your one-stop digital partner — beautiful websites, 24/7 AI chat assistants, booking systems, business automation and more. Affordable, done-for-you, with a free no-obligation demo.</p>
+<div class="cta-row">
+<a class="btn btn-grad" href="https://wa.me/8801324997271?text=Hi%20SB%20AI%20Studio!%20I%27d%20like%20a%20free%20demo." target="_blank" rel="noopener">Get a Free Demo</a>
+<a class="btn btn-out" href="#packages">View Packages</a>
+</div>
+</div></header>
+
+<section id="services"><div class="wrap">
+<div class="sec-title">What We Do</div>
+<div class="sec-sub">Six services, one team — everything your business needs to win online.</div>
+<div class="grid">
+<div class="card"><div class="ic">🌐</div><h3>Website Development</h3><p>Fast, modern, mobile-friendly websites for restaurants, salons, shops, clinics and every small business. Online ordering, booking and contact forms built in.</p><div class="price">From $399 per project</div></div>
+<div class="card"><div class="ic">🤖</div><h3>AI Chat Assistant</h3><p>A 24/7 AI assistant on your website that answers customer questions, takes bookings and captures leads — even while you sleep.</p><div class="price">From $299 setup</div></div>
+<div class="card"><div class="ic">⚙️</div><h3>Business Automation</h3><p>Email notifications, lead capture, appointment reminders and follow-ups — automated, so nothing slips through the cracks.</p><div class="price">Setup + monthly support</div></div>
+<div class="card"><div class="ic">💬</div><h3>Telegram &amp; Business Bots</h3><p>Custom bots for FAQs, lead collection, order requests and customer notifications. Built on our own proven platform.</p><div class="price">From $199 setup</div></div>
+<div class="card"><div class="ic">📍</div><h3>Local Digital Setup</h3><p>Google Business Profile setup &amp; optimization, online menus, booking pages and contact forms — get found by local customers.</p><div class="price">From $99 one-time</div></div>
+<div class="card"><div class="ic">🎨</div><h3>Content &amp; Product Listing</h3><p>Social media posts, promotional graphics, product uploads and online catalogs that keep your brand looking sharp.</p><div class="price">From $99/month</div></div>
+</div>
+</div></section>
+
+<section id="packages" style="background:var(--card2)"><div class="wrap">
+<div class="sec-title">Simple Packages</div>
+<div class="sec-sub">Pick what fits — every package starts with a free demo of your future website.</div>
+<div class="packs">
+<div class="pack"><h3>Starter</h3><div class="p">$399+</div>
+<ul><li>Professional business website</li><li>Mobile-friendly design</li><li>Contact form</li><li>Free hosting guidance</li></ul>
+<a class="btn btn-out" href="#contact">Start Now</a></div>
+<div class="pack"><h3>Growth</h3><div class="p">$599+</div>
+<ul><li>Everything in Starter</li><li>Online booking / ordering</li><li>Lead collection system</li><li>Email notifications</li></ul>
+<a class="btn btn-out" href="#contact">Start Now</a></div>
+<div class="pack hot"><div class="badge">MOST POPULAR</div><h3>Automation</h3><div class="p">$899+</div>
+<ul><li>Everything in Growth</li><li>AI chat assistant 24/7</li><li>Workflow automation</li><li>Follow-up sequences</li></ul>
+<a class="btn btn-grad" href="#contact">Start Now</a></div>
+<div class="pack"><h3>Complete</h3><div class="p">$1,299+</div>
+<ul><li>Everything in Automation</li><li>Google Business Profile</li><li>Social media starter pack</li><li>3 months ongoing support</li></ul>
+<a class="btn btn-out" href="#contact">Start Now</a></div>
+</div>
+<p style="text-align:center;color:var(--mut);margin-top:26px;font-size:.9rem">All packages: 50% advance, 50% on delivery. Monthly maintenance from $49.</p>
+</div></section>
+
+<section id="why"><div class="wrap">
+<div class="sec-title">Why SB AI Studio</div>
+<div class="sec-sub">Small business owners choose us because we make it easy.</div>
+<div class="wgrid">
+<div class="wcard">🎁<b>Free Demo First</b><span>We build a demo of YOUR website before you pay anything. You only pay if you love it.</span></div>
+<div class="wcard">💰<b>Honest Pricing</b><span>Transparent packages. No hidden fees, no surprises — and hosting discounts through our partners.</span></div>
+<div class="wcard">⚡<b>Fast Delivery</b><span>Most websites go live within days, not weeks. Revisions included until you're happy.</span></div>
+<div class="wcard">🛠️<b>One Team, All Services</b><span>Website, chatbot, automation, Google profile — one team handles everything. No juggling vendors.</span></div>
+</div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<div class="sec-title">Let's Talk</div>
+<div class="sec-sub">Message us on WhatsApp or Telegram — we usually reply within a few hours.</div>
+<div class="cgrid">
+<a class="ccard" href="https://wa.me/8801324997271?text=Hi%20SB%20AI%20Studio!" target="_blank" rel="noopener"><div class="ic">🟢</div><b>WhatsApp</b><p>+880 1324-997271</p><p style="color:var(--acc2)">Tap to chat instantly →</p></a>
+<a class="ccard" href="https://t.me/bdadmin69x" target="_blank" rel="noopener"><div class="ic">✈️</div><b>Telegram</b><p>@bdadmin69x</p><p style="color:var(--acc2)">Message us on Telegram →</p></a>
+<a class="ccard" href="mailto:selimsb645@gmail.com?subject=Project%20Inquiry%20-%20SB%20AI%20Studio"><div class="ic">✉️</div><b>Email</b><p>selimsb645@gmail.com</p><p style="color:var(--acc2)">Send us an email →</p></a>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<b>SB AI STUDIO</b> — Web Development • AI Automation • Business Solutions<br>
+© 2026 SB AI Studio. Websites, AI assistants &amp; digital growth for small businesses worldwide.
+</div></footer>
+</body>
+</html>
