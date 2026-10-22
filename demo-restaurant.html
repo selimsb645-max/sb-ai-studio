@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunrise Bakery — Fresh Baked Daily | Demo by SB AI Studio</title>
+<style>
+:root{--bg:#fffaf3;--card:#fff;--txt:#3a2e22;--mut:#8a7a68;--acc:#e07b39;--acc2:#c95d2e}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+nav{background:#3a2e22;color:#fff;padding:14px 0}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+nav b{font-size:1.25rem;letter-spacing:.5px}
+nav a{color:#f3c48e;text-decoration:none;margin-left:18px;font-size:.95rem}
+header{padding:80px 0 60px;text-align:center;background:linear-gradient(180deg,#fdeed8,#fffaf3)}
+h1{font-size:clamp(1.8rem,4vw,2.8rem)}
+.tag{color:var(--acc2);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.8rem}
+.sub{color:var(--mut);margin:14px auto 28px;max-width:520px}
+.btn{display:inline-block;background:var(--acc);color:#fff;padding:13px 28px;border-radius:8px;text-decoration:none;font-weight:600}
+section{padding:55px 0}
+h2{text-align:center;font-size:1.7rem;margin-bottom:30px}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.item{background:var(--card);border:1px solid #f0e0cc;border-radius:12px;padding:22px;text-align:center}
+.item .em{font-size:2rem}
+.item h3{margin:8px 0 4px;font-size:1.05rem}
+.item p{color:var(--mut);font-size:.9rem}
+.item .pr{color:var(--acc2);font-weight:800;margin-top:6px}
+.cats{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
+.cat{background:#fff;border:1px solid #f0e0cc;border-radius:20px;padding:8px 20px;font-weight:600;color:var(--acc2);cursor:pointer}
+.cat.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.order{background:#3a2e22;color:#fff;text-align:center}
+.order .btn{background:#f3c48e;color:#3a2e22}
+form{max-width:460px;margin:0 auto;text-align:left}
+label{display:block;font-weight:600;margin:14px 0 6px;font-size:.92rem}
+input,textarea{width:100%;padding:12px;border:1px solid #d9c9b4;border-radius:8px;font-size:.95rem;background:#fff}
+footer{padding:30px 0;text-align:center;color:var(--mut);font-size:.85rem}
+.demo-ribbon{position:fixed;top:0;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,#6c5ce7,#00cec9);color:#fff;font-size:.8rem;font-weight:700;padding:6px 26px;border-radius:0 0 10px 10px;z-index:99;text-decoration:none}
+@media(max-width:640px){nav a{display:none}}
+</style>
+</head>
+<body>
+<a class="demo-ribbon" href="https://selimsb645-max.github.io/sb-ai-studio/" target="_blank" rel="noopener">⚡ Demo site by SB AI Studio — tap to get yours</a>
+<nav><div class="wrap nav-in"><b>🥐 Sunrise Bakery</b><div><a href="#menu">Menu</a><a href="#order">Order Online</a><a href="#contact">Contact</a></div></div></nav>
+<header><div class="wrap">
+<div class="tag">Fresh Baked Daily</div>
+<h1>Warm From the Oven,<br>Right to Your Door</h1>
+<p class="sub">Artisan breads, celebration cakes and breakfast treats — baked every morning since 2012. Order online, ready in 20 minutes.</p>
+<a class="btn" href="#order">🛒 Order Online</a>
+</div></header>
+<section id="menu"><div class="wrap">
+<h2>Today's Menu</h2>
+<div class="cats"><div class="cat on">All</div><div class="cat">Breads</div><div class="cat">Cakes</div><div class="cat">Breakfast</div></div>
+<div class="menu" id="menu-grid">
+<div class="item"><div class="em">🥖</div><h3>Sourdough Loaf</h3><p>48-hour slow-fermented, crispy crust</p><div class="pr">$6.50</div></div>
+<div class="item"><div class="em">🧁</div><h3>Red Velvet Cupcakes</h3><p>Box of 6 with cream-cheese frosting</p><div class="pr">$12.00</div></div>
+<div class="item"><div class="em">🎂</div><h3>Celebration Cake</h3><p>Custom 8" cake, your message on top</p><div class="pr">From $38</div></div>
+<div class="item"><div class="em">🥐</div><h3>Butter Croissants</h3><p>Box of 4, French butter, flaky layers</p><div class="pr">$9.00</div></div>
+<div class="item"><div class="em">🥯</div><h3>Everything Bagel</h3><p>Toasted with herb cream cheese</p><div class="pr">$4.25</div></div>
+<div class="item"><div class="em">☕</div><h3>Fresh Coffee</h3><p>Locally roasted, any style</p><div class="pr">$3.50</div></div>
+</div>
+</div></section>
+<section id="order" class="order"><div class="wrap">
+<h2 style="color:#fff">Order Ahead — Skip the Line</h2>
+<p style="color:#cbb89f;margin-bottom:20px">Tell us what you'd like — your order is confirmed by email and ready in 20 minutes.</p>
+<form onsubmit="event.preventDefault();this.querySelector('[type=submit]').value='✓ Order sent — check your email!';">
+<label>Your name</label><input required placeholder="Jane Smith">
+<label>Email</label><input type="email" required placeholder="jane@email.com">
+<label>What would you like?</label><textarea rows="3" placeholder="1x Sourdough Loaf, 6x Red Velvet Cupcakes..."></textarea>
+<label style="margin-top:14px"></label>
+<button class="btn" type="submit" style="width:100%">Place Order</button>
+</form>
+</div></section>
+<section id="contact"><div class="wrap" style="text-align:center">
+<h2>Visit Us</h2>
+<p class="sub">📍 214 Maple Street, Springfield &nbsp;•&nbsp; 🕕 Mon–Sat 6:30 AM – 6 PM<br>📞 (555) 214-8890 &nbsp;•&nbsp; ✉️ hello@sunrisebakery.demo</p>
+</div></section>
+<footer><div class="wrap">© 2026 Sunrise Bakery — Demo website built by SB AI Studio</div></footer>
+</body>
+</html>

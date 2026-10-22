@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SB AI Studio — Your One-Stop Digital Partner</title>
+<title>SB AI Studio — Websites, AI Chatbots & Automation for Small Businesses</title>
 <meta name="description" content="SB AI Studio builds affordable websites, AI chat assistants, business automation, Telegram bots, Google Business Profile setup and digital content for small businesses. Free no-obligation demo.">
 <meta name="keywords" content="web development, AI chatbot, business automation, telegram bot, google business profile, digital marketing, small business website, booking system, online ordering">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0d17'/%3E%3Ctext x='32' y='43' font-family='Segoe UI,sans-serif' font-size='28' font-weight='800' fill='%236c5ce7' text-anchor='middle'%3ESB%3C/text%3E%3C/svg%3E">
 <style>
 :root{--bg:#0b0d17;--card:#131729;--card2:#1a2038;--txt:#e8ebf5;--mut:#9aa3c0;--acc:#6c5ce7;--acc2:#00cec9;--grad:linear-gradient(135deg,#6c5ce7,#00cec9)}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -13,12 +14,14 @@ html{scroll-behavior:smooth}
 body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
 .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
 nav{position:sticky;top:0;z-index:50;background:rgba(11,13,23,.92);backdrop-filter:blur(8px);border-bottom:1px solid #232a44}
-.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1100px;margin:0 auto}
-.logo{font-size:1.35rem;font-weight:800;letter-spacing:.5px;text-decoration:none;color:var(--txt)}
-.logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.navlinks a{color:var(--mut);text-decoration:none;margin-left:22px;font-size:.95rem}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1100px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.logo{width:38px;height:38px;flex:none}
+.brand b{font-size:1.18rem;color:var(--txt);letter-spacing:.4px}
+.brand b i{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.navlinks a{color:var(--mut);text-decoration:none;margin-left:20px;font-size:.94rem}
 .navlinks a:hover{color:var(--txt)}
-.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-weight:600;text-decoration:none;transition:.25s;border:none;cursor:pointer;font-size:1rem}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-weight:600;text-decoration:none;transition:.25s;border:none;cursor:pointer;font-size:1rem;text-align:center}
 .btn-grad{background:var(--grad);color:#fff}
 .btn-grad:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(108,92,231,.35)}
 .btn-out{border:1px solid #39406a;color:var(--txt)}
@@ -51,6 +54,30 @@ section{padding:70px 0}
 .wcard{background:var(--card2);border-radius:12px;padding:26px 18px}
 .wcard b{display:block;font-size:1.05rem;margin-top:10px}
 .wcard span{color:var(--mut);font-size:.9rem}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+.pcard{background:var(--card);border:1px solid #232a44;border-radius:14px;padding:0;overflow:hidden;transition:.25s;display:block;text-decoration:none;color:var(--txt)}
+.pcard:hover{border-color:var(--acc2);transform:translateY(-4px)}
+.pview{height:150px;display:flex;align-items:center;justify-content:center;font-size:2.6rem}
+.pv1{background:linear-gradient(135deg,#fdeed8,#f7d9ae)}
+.pv2{background:linear-gradient(135deg,#fce7ef,#f6c6da)}
+.pbody{padding:22px}
+.pbody h3{font-size:1.1rem}
+.pbody p{color:var(--mut);font-size:.9rem;margin:6px 0 12px}
+.ptag{display:inline-block;background:var(--card2);color:var(--acc2);font-size:.78rem;font-weight:700;padding:4px 12px;border-radius:14px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.step{background:var(--card);border:1px solid #232a44;border-radius:14px;padding:26px}
+.step .n{width:40px;height:40px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;margin-bottom:14px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{color:var(--mut);font-size:.92rem}
+.faq{max-width:720px;margin:0 auto}
+details{background:var(--card);border:1px solid #232a44;border-radius:12px;padding:18px 22px;margin-bottom:12px}
+details summary{font-weight:600;cursor:pointer;font-size:.98rem}
+details p{color:var(--mut);margin-top:10px;font-size:.94rem}
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:34px;align-items:center}
+.about .logo-big{text-align:center}
+.about .logo-big .logo{width:130px;height:130px}
+.about p{color:var(--mut);margin-bottom:14px;font-size:.97rem}
+.about b{color:var(--txt)}
 .contact{background:radial-gradient(ellipse 70% 80% at 50% 120%,rgba(108,92,231,.2),transparent)}
 .cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:36px}
 .ccard{background:var(--card);border:1px solid #232a44;border-radius:14px;padding:30px;text-align:center;text-decoration:none;color:var(--txt);transition:.25s}
@@ -64,8 +91,8 @@ footer{border-top:1px solid #232a44;padding:30px 0;text-align:center;color:var(-
 </head>
 <body>
 <nav><div class="nav-in">
-<a class="logo" href="#">SB <span>AI</span> STUDIO</a>
-<div class="navlinks"><a href="#services">Services</a><a href="#packages">Packages</a><a href="#why">Why Us</a><a href="#contact">Contact</a></div>
+<a class="brand" href="#"><svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6c5ce7"/><stop offset="1" stop-color="#00cec9"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="14" fill="#131729" stroke="url(#g)" stroke-width="2.5"/><path d="M14 40c2 3 5 4 8 4 4 0 7-2 7-5 0-3-2.5-4.5-7-5.5-4.5-1-7-2.5-7-5.5 0-3 2.5-5 6-5 3 0 5.5 1 7.5 3.2" fill="none" stroke="url(#g)" stroke-width="3.4" stroke-linecap="round"/><circle cx="46" cy="21" r="3.6" fill="url(#g)"/><path d="M46 29v8c0 5-3 8-8.5 8" fill="none" stroke="url(#g)" stroke-width="3.4" stroke-linecap="round"/></svg><b>SB <i>AI</i> STUDIO</b></a>
+<div class="navlinks"><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#packages">Packages</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
 </div></nav>
 
 <header><div class="wrap">
@@ -73,7 +100,7 @@ footer{border-top:1px solid #232a44;padding:30px 0;text-align:center;color:var(-
 <p class="sub">SB AI Studio is your one-stop digital partner — beautiful websites, 24/7 AI chat assistants, booking systems, business automation and more. Affordable, done-for-you, with a free no-obligation demo.</p>
 <div class="cta-row">
 <a class="btn btn-grad" href="https://wa.me/8801324997271?text=Hi%20SB%20AI%20Studio!%20I%27d%20like%20a%20free%20demo." target="_blank" rel="noopener">Get a Free Demo</a>
-<a class="btn btn-out" href="#packages">View Packages</a>
+<a class="btn btn-out" href="#portfolio">See Live Demos</a>
 </div>
 </div></header>
 
@@ -90,7 +117,17 @@ footer{border-top:1px solid #232a44;padding:30px 0;text-align:center;color:var(-
 </div>
 </div></section>
 
-<section id="packages" style="background:var(--card2)"><div class="wrap">
+<section id="portfolio" style="background:var(--card2)"><div class="wrap">
+<div class="sec-title">Our Work — Live Demo Websites</div>
+<div class="sec-sub">These are fully working demo sites we built. Yours will be designed for YOUR business — free, before you pay anything.</div>
+<div class="pgrid">
+<a class="pcard" href="demo-restaurant.html"><div class="pview pv1">🥐🎂🥖</div><div class="pbody"><h3>Sunrise Bakery</h3><p>Online menu, quick order form, 20-minute pickup flow — built for a neighborhood bakery.</p><div class="ptag">Restaurant / Ordering</div></div></a>
+<a class="pcard" href="demo-salon.html"><div class="pview pv2">💅✨💇‍♀️</div><div class="pbody"><h3>Glow Beauty Salon</h3><p>Service list with prices, real-time appointment booking, instant email confirmation.</p><div class="ptag">Salon / Booking</div></div></a>
+</div>
+<p style="text-align:center;color:var(--mut);margin-top:28px;font-size:.93rem">Want to see a free demo of <b>your</b> business? <a href="https://wa.me/8801324997271?text=Show%20me%20a%20free%20demo%20of%20my%20business!" style="color:var(--acc2)" target="_blank" rel="noopener">Just ask on WhatsApp →</a></p>
+</div></section>
+
+<section id="packages"><div class="wrap">
 <div class="sec-title">Simple Packages</div>
 <div class="sec-sub">Pick what fits — every package starts with a free demo of your future website.</div>
 <div class="packs">
@@ -110,14 +147,49 @@ footer{border-top:1px solid #232a44;padding:30px 0;text-align:center;color:var(-
 <p style="text-align:center;color:var(--mut);margin-top:26px;font-size:.9rem">All packages: 50% advance, 50% on delivery. Monthly maintenance from $49.</p>
 </div></section>
 
+<section id="process"><div class="wrap">
+<div class="sec-title">How We Work</div>
+<div class="sec-sub">From first message to live website — in four simple steps.</div>
+<div class="steps">
+<div class="step"><div class="n">1</div><h3>Tell Us About You</h3><p>One short message on WhatsApp or email. We'll look at your business and current website.</p></div>
+<div class="step"><div class="n">2</div><h3>Free Demo in Days</h3><p>We build a working demo of YOUR website — logo, menu, booking, whatever you need. Zero cost, zero obligation.</p></div>
+<div class="step"><div class="n">3</div><h3>You Approve &amp; Pay 50%</h3><p>Love the demo? We finish everything, connect your domain and make it live.</p></div>
+<div class="step"><div class="n">4</div><h3>Go Live &amp; Grow</h3><p>Final payment, handover with training, and optional monthly care so you never worry about tech.</p></div>
+</div>
+</div></section>
+
+<section id="about" style="background:var(--card2)"><div class="wrap">
+<div class="sec-title">About SB AI Studio</div>
+<div class="sec-sub">A modern digital studio built for one mission: small businesses deserve big-business websites.</div>
+<div class="about">
+<div class="logo-big"><svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6c5ce7"/><stop offset="1" stop-color="#00cec9"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="14" fill="#131729" stroke="url(#g2)" stroke-width="2.5"/><path d="M14 40c2 3 5 4 8 4 4 0 7-2 7-5 0-3-2.5-4.5-7-5.5-4.5-1-7-2.5-7-5.5 0-3 2.5-5 6-5 3 0 5.5 1 7.5 3.2" fill="none" stroke="url(#g2)" stroke-width="3.4" stroke-linecap="round"/><circle cx="46" cy="21" r="3.6" fill="url(#g2)"/><path d="M46 29v8c0 5-3 8-8.5 8" fill="none" stroke="url(#g2)" stroke-width="3.4" stroke-linecap="round"/></svg></div>
+<div>
+<p><b>We're SB AI Studio</b> — an independent digital studio founded by Selim SB. We saw too many great local businesses losing customers to competitors with better websites, so we set out to fix that: <b>affordable, done-for-you digital work, delivered fast, with no surprises.</b></p>
+<p>Every project starts with a <b>free, no-obligation demo</b> — because we'd rather show than tell. We combine smart AI tooling with careful hand-crafting, which keeps our prices low and our delivery quick. Websites, AI chat assistants, booking systems, automation, Google Business Profile — one team, one point of contact.</p>
+<p style="color:var(--acc2);font-weight:600">Our promise: if you don't love the demo, you pay nothing.</p>
+</div>
+</div>
+</div></section>
+
 <section id="why"><div class="wrap">
-<div class="sec-title">Why SB AI Studio</div>
-<div class="sec-sub">Small business owners choose us because we make it easy.</div>
+<div class="sec-title">Why Businesses Choose Us</div>
 <div class="wgrid">
 <div class="wcard">🎁<b>Free Demo First</b><span>We build a demo of YOUR website before you pay anything. You only pay if you love it.</span></div>
-<div class="wcard">💰<b>Honest Pricing</b><span>Transparent packages. No hidden fees, no surprises — and hosting discounts through our partners.</span></div>
+<div class="wcard">💰<b>Honest Pricing</b><span>Transparent packages. No hidden fees — and hosting discounts through our partners.</span></div>
 <div class="wcard">⚡<b>Fast Delivery</b><span>Most websites go live within days, not weeks. Revisions included until you're happy.</span></div>
-<div class="wcard">🛠️<b>One Team, All Services</b><span>Website, chatbot, automation, Google profile — one team handles everything. No juggling vendors.</span></div>
+<div class="wcard">🛠️<b>One Team, All Services</b><span>Website, chatbot, automation, Google profile — one team handles everything.</span></div>
+</div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+<div class="sec-title">Frequently Asked Questions</div>
+<div class="sec-sub">Straight answers, no fine print.</div>
+<div class="faq">
+<details><summary>Is the demo really free?</summary><p>Yes — 100% free with no obligation. We build a working demo of your future website, you look at it, and only decide after. If you don't like it, you owe nothing.</p></details>
+<details><summary>How fast can my website go live?</summary><p>Most sites are live within 5–10 days of your approval. Simple sites can be faster — we'll give you an exact timeline with the demo.</p></details>
+<details><summary>Do I need my own hosting and domain?</summary><p>We handle everything, including recommending reliable hosting with a discount through our partners. You can use your existing domain or we'll register one for you.</p></details>
+<details><summary>What if I already have a website?</summary><p>Perfect — we audit it for free, show you exactly what's missing (mobile issues, no booking, no chat), and upgrade it without losing your content.</p></details>
+<details><summary>What's included in maintenance?</summary><p>Content updates, security, backups, small changes and priority support — from $49/month. Optional, cancel anytime.</p></details>
 </div>
 </div></section>
 
