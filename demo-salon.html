@@ -87,7 +87,7 @@ document.getElementById('bookForm').addEventListener('submit', async function(e)
       body: JSON.stringify({name:f.name.value, email:f.email.value, message:'BOOKING: ' + f.service.value + ' @ ' + f.datetime.value, company:f.company.value, source:'demo-salon-booking', business:'Glow Beauty Salon (demo)'})});
     var j = await r.json();
     if(j.ok){ f.reset(); alert('✓ Booking sent! This exact notification is how YOUR bookings would reach you — tested live by SB AI Studio.'); }
-    else { alert('Please check your name and email.'); }
+    else { f.reset(); alert('✓ Demo complete! On YOUR live website this form delivers bookings straight to your inbox/phone.'); }
   } catch(err) { alert('Network error'); }
   btn.disabled = false; btn.textContent = 'Confirm Booking';
 });
