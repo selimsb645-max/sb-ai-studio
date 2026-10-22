@@ -39,7 +39,7 @@ footer{padding:30px 0;text-align:center;color:var(--mut);font-size:.85rem}
 </style>
 </head>
 <body>
-<a class="demo-ribbon" href="https://selimsb645-max.github.io/sb-ai-studio/" target="_blank" rel="noopener">⚡ Demo site by SB AI Studio — tap to get yours</a>
+<a class="demo-ribbon" href="https://selimsb645-max.github.io/sb-ai-studio/" target="_blank" rel="noopener">⚡ DEMO PROJECT by SB AI Studio — tap to get yours free</a>
 <nav><div class="wrap nav-in"><b>✨ Glow Beauty Salon</b><div><a href="#services">Services</a><a href="#book">Book Now</a><a href="#contact">Contact</a></div></div></nav>
 <header><div class="wrap">
 <div class="tag">Walk Out Glowing</div>
@@ -59,26 +59,26 @@ footer{padding:30px 0;text-align:center;color:var(--mut);font-size:.85rem}
 <section id="book" class="book"><div class="wrap">
 <h2 style="color:#fff">Book Online — Real-Time Slots</h2>
 <p style="color:#d8bccb;margin-bottom:20px">Pick a service and time. You'll get instant confirmation by email.</p>
-<form onsubmit="event.preventDefault();this.querySelector('[type=submit]').value='✓ Booked — see you soon!';">
-<label>Service</label><select><option>Cut &amp; Style</option><option>Manicure &amp; Gel</option><option>Glow Facial</option><option>Bridal Package</option></select>
-<label>Your name</label><input required placeholder="Jane Smith">
-<label>Email</label><input type="email" required placeholder="jane@email.com">
-<label>Preferred date &amp; time</label><input type="datetime-local">
+<form action="https://formsubmit.co/selimsb645@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="DEMO TEST — Glow Salon booking">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://selimsb645-max.github.io/sb-ai-studio/demo-salon.html?sent=1#book">
+<label>Service</label><select name="service"><option>Cut &amp; Style</option>
+<option>Manicure &amp; Gel</option><option>Glow Facial</option><option>Bridal Package</option></select>
+<label>Your name</label><input name="name" required placeholder="Jane Smith">
+<label>Email</label><input type="email" name="email" required placeholder="jane@email.com">
+<label>Preferred date &amp; time</label><input type="datetime-local" name="datetime">
 <label style="margin-top:14px"></label>
 <button class="btn" type="submit" style="width:100%">Confirm Booking</button>
+<p style="color:#d8bccb;font-size:.85rem;margin-top:12px;text-align:center">This is a REAL demo: your booking email goes straight to the SB AI Studio team — exactly how your customers' bookings would reach you.</p>
 </form>
 </div></section>
-<section><div class="wrap">
-<div class="rev">
-<div class="stars">★★★★★</div>
-<p style="margin-top:10px">"So easy to book online and my gel nails lasted 4 weeks. Best salon in town!"</p>
-<b>— Maria L., regular since 2023</b>
-</div>
-</div></section>
+
 <section id="contact"><div class="wrap" style="text-align:center">
 <h2>Find Us</h2>
 <p class="sub">📍 78 Rosewood Avenue, Springfield &nbsp;•&nbsp; 🕘 Tue–Sun 9 AM – 7 PM<br>📞 (555) 789-3345 &nbsp;•&nbsp; ✉️ hello@glowsalon.demo</p>
 </div></section>
 <footer><div class="wrap">© 2026 Glow Beauty Salon — Demo website built by SB AI Studio</div></footer>
+<script>if(new URLSearchParams(location.search).get('sent')==='1'){alert('✓ Booking sent! Check the SB AI Studio inbox — this is how your real bookings would arrive.');}</script>
 </body>
 </html>

@@ -40,7 +40,7 @@ footer{padding:30px 0;text-align:center;color:var(--mut);font-size:.85rem}
 </style>
 </head>
 <body>
-<a class="demo-ribbon" href="https://selimsb645-max.github.io/sb-ai-studio/" target="_blank" rel="noopener">⚡ Demo site by SB AI Studio — tap to get yours</a>
+<a class="demo-ribbon" href="https://selimsb645-max.github.io/sb-ai-studio/" target="_blank" rel="noopener">⚡ DEMO PROJECT by SB AI Studio — tap to get yours free</a>
 <nav><div class="wrap nav-in"><b>🥐 Sunrise Bakery</b><div><a href="#menu">Menu</a><a href="#order">Order Online</a><a href="#contact">Contact</a></div></div></nav>
 <header><div class="wrap">
 <div class="tag">Fresh Baked Daily</div>
@@ -63,12 +63,16 @@ footer{padding:30px 0;text-align:center;color:var(--mut);font-size:.85rem}
 <section id="order" class="order"><div class="wrap">
 <h2 style="color:#fff">Order Ahead — Skip the Line</h2>
 <p style="color:#cbb89f;margin-bottom:20px">Tell us what you'd like — your order is confirmed by email and ready in 20 minutes.</p>
-<form onsubmit="event.preventDefault();this.querySelector('[type=submit]').value='✓ Order sent — check your email!';">
-<label>Your name</label><input required placeholder="Jane Smith">
-<label>Email</label><input type="email" required placeholder="jane@email.com">
-<label>What would you like?</label><textarea rows="3" placeholder="1x Sourdough Loaf, 6x Red Velvet Cupcakes..."></textarea>
+<form action="https://formsubmit.co/selimsb645@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="DEMO TEST — Sunrise Bakery order">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://selimsb645-max.github.io/sb-ai-studio/demo-restaurant.html?sent=1#order">
+<label>Your name</label><input name="name" required placeholder="Jane Smith">
+<label>Email</label><input type="email" name="email" required placeholder="jane@email.com">
+<label>What would you like?</label><textarea name="order" rows="3" placeholder="1x Sourdough Loaf, 6x Red Velvet Cupcakes..."></textarea>
 <label style="margin-top:14px"></label>
 <button class="btn" type="submit" style="width:100%">Place Order</button>
+<p style="color:#cbb89f;font-size:.85rem;margin-top:12px;text-align:center">This is a REAL demo: your order email goes straight to the SB AI Studio team — exactly how your customers' orders would reach you.</p>
 </form>
 </div></section>
 <section id="contact"><div class="wrap" style="text-align:center">
@@ -76,5 +80,6 @@ footer{padding:30px 0;text-align:center;color:var(--mut);font-size:.85rem}
 <p class="sub">📍 214 Maple Street, Springfield &nbsp;•&nbsp; 🕕 Mon–Sat 6:30 AM – 6 PM<br>📞 (555) 214-8890 &nbsp;•&nbsp; ✉️ hello@sunrisebakery.demo</p>
 </div></section>
 <footer><div class="wrap">© 2026 Sunrise Bakery — Demo website built by SB AI Studio</div></footer>
+<script>if(new URLSearchParams(location.search).get('sent')==='1'){alert('✓ Order sent! Check the SB AI Studio inbox — this is how your real orders would arrive.');}</script>
 </body>
 </html>
