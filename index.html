@@ -12,212 +12,300 @@
 <meta property="og:url" content="https://selimsb645-max.github.io/sb-ai-studio/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"SB AI Studio","description":"Web development, AI chatbots, business automation and digital services for small businesses.","email":"selimsb645@gmail.com","telephone":"+8801324997271","url":"https://selimsb645-max.github.io/sb-ai-studio/","sameAs":["https://t.me/bdadmin69x"]}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0d17'/%3E%3Ctext x='32' y='43' font-family='Segoe UI,sans-serif' font-size='28' font-weight='800' fill='%236c5ce7' text-anchor='middle'%3ESB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b0d17;--card:#131729;--card2:#1a2038;--txt:#e8ebf5;--mut:#9aa3c0;--acc:#6c5ce7;--acc2:#00cec9;--grad:linear-gradient(135deg,#6c5ce7,#00cec9)}
+:root{--bg:#070a13;--bg2:#0b0f1c;--card:rgba(255,255,255,.035);--card2:rgba(255,255,255,.06);--line:rgba(255,255,255,.09);--txt:#eef1fa;--mut:#9aa3c0;--acc:#8b7cff;--acc2:#2dd4bf;--grad:linear-gradient(135deg,#8b7cff,#2dd4bf);--gradsoft:linear-gradient(135deg,rgba(139,124,255,.16),rgba(45,212,191,.16))}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-nav{position:sticky;top:0;z-index:50;background:rgba(11,13,23,.92);backdrop-filter:blur(8px);border-bottom:1px solid #232a44}
-.nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1100px;margin:0 auto}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+background:
+ radial-gradient(ellipse 55% 40% at 12% -5%,rgba(139,124,255,.14),transparent),
+ radial-gradient(ellipse 45% 35% at 95% 15%,rgba(45,212,191,.09),transparent),
+ radial-gradient(ellipse 50% 45% at 50% 110%,rgba(139,124,255,.08),transparent)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+h1,h2,h3,.brand b,.p{font-family:'Sora','Inter',sans-serif}
+
+/* ---------- NAV ---------- */
+nav{position:sticky;top:0;z-index:50;background:rgba(7,10,19,.7);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:.3s}
+nav.scrolled{border-bottom-color:var(--line);background:rgba(7,10,19,.88)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:15px 24px;max-width:1140px;margin:0 auto}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
-.logo{width:38px;height:38px;flex:none}
-.brand b{font-size:1.18rem;color:var(--txt);letter-spacing:.4px}
+.logo{width:38px;height:38px;flex:none;filter:drop-shadow(0 0 10px rgba(139,124,255,.45))}
+.brand b{font-size:1.14rem;color:var(--txt);letter-spacing:.5px;font-weight:700}
 .brand b i{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.navlinks a{color:var(--mut);text-decoration:none;margin-left:20px;font-size:.94rem}
+.navlinks a{color:var(--mut);text-decoration:none;margin-left:22px;font-size:.93rem;font-weight:500;transition:.2s}
 .navlinks a:hover{color:var(--txt)}
-.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-weight:600;text-decoration:none;transition:.25s;border:none;cursor:pointer;font-size:1rem;text-align:center}
-.btn-grad{background:var(--grad);color:#fff}
-.btn-grad:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(108,92,231,.35)}
-.btn-out{border:1px solid #39406a;color:var(--txt)}
-.btn-out:hover{border-color:var(--acc2);color:var(--acc2)}
-header{padding:90px 0 70px;text-align:center;background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(108,92,231,.25),transparent),radial-gradient(ellipse 60% 40% at 80% 30%,rgba(0,206,201,.12),transparent)}
-h1{font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.15;font-weight:800}
+.navlinks a.navcta{color:var(--acc2);font-weight:600}
+
+/* ---------- BUTTONS ---------- */
+.btn{display:inline-block;padding:14px 30px;border-radius:12px;font-weight:600;text-decoration:none;transition:.28s;border:none;cursor:pointer;font-size:.98rem;text-align:center;font-family:'Sora',sans-serif;position:relative;overflow:hidden}
+.btn-grad{background:var(--grad);color:#0a0a14;box-shadow:0 6px 24px rgba(139,124,255,.35)}
+.btn-grad::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:.6s}
+.btn-grad:hover::after{left:130%}
+.btn-grad:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(139,124,255,.5)}
+.btn-out{border:1px solid rgba(255,255,255,.18);color:var(--txt);background:rgba(255,255,255,.03)}
+.btn-out:hover{border-color:var(--acc2);color:var(--acc2);transform:translateY(-2px)}
+
+/* ---------- HERO ---------- */
+header{padding:110px 0 90px;text-align:center;position:relative}
+header::before,header::after{content:"";position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;pointer-events:none;animation:float 9s ease-in-out infinite alternate}
+header::before{width:420px;height:420px;background:rgba(139,124,255,.22);top:-140px;left:8%}
+header::after{width:380px;height:380px;background:rgba(45,212,191,.14);bottom:-160px;right:6%;animation-delay:-4s}
+@keyframes float{from{transform:translateY(-24px)}to{transform:translateY(24px)}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--card);padding:8px 18px;border-radius:99px;font-size:.85rem;color:var(--mut);margin-bottom:28px}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--acc2);box-shadow:0 0 12px var(--acc2);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.4}}
+h1{font-size:clamp(2.3rem,5.2vw,3.9rem);line-height:1.12;font-weight:800;letter-spacing:-.02em}
 h1 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.sub{color:var(--mut);max-width:640px;margin:20px auto 34px;font-size:1.12rem}
-.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-section{padding:70px 0}
-.sec-title{text-align:center;font-size:2rem;font-weight:800;margin-bottom:10px}
-.sec-sub{text-align:center;color:var(--mut);margin-bottom:45px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
-.card{background:var(--card);border:1px solid #232a44;border-radius:14px;padding:28px;transition:.25s}
-.card:hover{border-color:var(--acc);transform:translateY(-4px)}
-.card h3{font-size:1.15rem;margin:14px 0 8px}
-.card p{color:var(--mut);font-size:.95rem}
-.ic{width:46px;height:46px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
-.price{color:var(--acc2);font-weight:700;margin-top:10px;font-size:.92rem}
-.packs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
-.pack{background:var(--card);border:1px solid #232a44;border-radius:14px;padding:28px;display:flex;flex-direction:column}
-.pack.hot{border-color:var(--acc);position:relative;box-shadow:0 0 40px rgba(108,92,231,.18)}
-.badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--grad);color:#fff;font-size:.75rem;font-weight:700;padding:4px 14px;border-radius:20px;white-space:nowrap}
-.pack h3{font-size:1.2rem}
-.pack .p{font-size:1.55rem;font-weight:800;margin:8px 0 16px}
-.pack ul{list-style:none;margin-bottom:22px;flex:1}
-.pack li{padding:7px 0;color:var(--mut);font-size:.93rem;border-bottom:1px dashed #232a44}
-.pack li::before{content:"✓ ";color:var(--acc2);font-weight:700}
-.wgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;text-align:center}
-.wcard{background:var(--card2);border-radius:12px;padding:26px 18px}
-.wcard b{display:block;font-size:1.05rem;margin-top:10px}
-.wcard span{color:var(--mut);font-size:.9rem}
+.sub{color:var(--mut);max-width:660px;margin:24px auto 40px;font-size:1.14rem}
+.cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.trust-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:44px}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:9px 18px;font-size:.86rem;color:var(--mut)}
+.chip b{color:var(--txt);font-family:'Sora',sans-serif}
+
+/* ---------- SECTIONS ---------- */
+section{padding:86px 0;position:relative}
+.eyebrow-cap{display:block;text-align:center;font-size:.8rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px}
+.sec-title{text-align:center;font-size:clamp(1.7rem,3.4vw,2.35rem);font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
+.sec-sub{text-align:center;color:var(--mut);margin-bottom:52px;max-width:640px;margin-left:auto;margin-right:auto}
+
+/* ---------- SERVICES ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;transition:.3s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);opacity:0;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:rgba(139,124,255,.45);background:var(--card2)}
+.card:hover::before{opacity:1}
+.card h3{font-size:1.12rem;margin:16px 0 8px;font-weight:700}
+.card p{color:var(--mut);font-size:.93rem}
+.ic{width:50px;height:50px;border-radius:14px;background:var(--gradsoft);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:1.35rem}
+.price{color:var(--acc2);font-weight:700;margin-top:14px;font-size:.9rem;font-family:'Sora',sans-serif}
+
+/* ---------- PORTFOLIO ---------- */
 .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
-.pcard{background:var(--card);border:1px solid #232a44;border-radius:14px;padding:0;overflow:hidden;transition:.25s;display:block;text-decoration:none;color:var(--txt)}
-.pcard:hover{border-color:var(--acc2);transform:translateY(-4px)}
-.pview{height:150px;display:flex;align-items:center;justify-content:center;font-size:2.6rem}
-.pv1{background:linear-gradient(135deg,#fdeed8,#f7d9ae)}
-.pv2{background:linear-gradient(135deg,#fce7ef,#f6c6da)}
-.pbody{padding:22px}
-.pbody h3{font-size:1.1rem}
-.pbody p{color:var(--mut);font-size:.9rem;margin:6px 0 12px}
-.ptag{display:inline-block;background:var(--card2);color:var(--acc2);font-size:.78rem;font-weight:700;padding:4px 12px;border-radius:14px}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
-.step{background:var(--card);border:1px solid #232a44;border-radius:14px;padding:26px}
-.step .n{width:40px;height:40px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;margin-bottom:14px}
-.step h3{font-size:1.05rem;margin-bottom:6px}
-.step p{color:var(--mut);font-size:.92rem}
-.faq{max-width:720px;margin:0 auto}
-details{background:var(--card);border:1px solid #232a44;border-radius:12px;padding:18px 22px;margin-bottom:12px}
-details summary{font-weight:600;cursor:pointer;font-size:.98rem}
-details p{color:var(--mut);margin-top:10px;font-size:.94rem}
-.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:34px;align-items:center}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:0;overflow:hidden;transition:.3s;display:block;text-decoration:none;color:var(--txt)}
+.pcard:hover{transform:translateY(-6px);border-color:rgba(45,212,191,.5);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.pview{height:170px;display:flex;align-items:center;justify-content:center;font-size:2.7rem;position:relative}
+.pv1{background:linear-gradient(135deg,#2b2237,#3d2f2b)}
+.pv2{background:linear-gradient(135deg,#2a2537,#2b3a3d)}
+.pbody{padding:24px}
+.pbody h3{font-size:1.12rem;font-weight:700}
+.pbody p{color:var(--mut);font-size:.9rem;margin:8px 0 14px}
+.ptag{display:inline-block;background:var(--gradsoft);border:1px solid var(--line);color:var(--acc2);font-size:.76rem;font-weight:700;padding:5px 14px;border-radius:99px;letter-spacing:.04em}
+
+/* ---------- PACKAGES ---------- */
+.packs{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:22px}
+.pack{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:32px 28px;display:flex;flex-direction:column;transition:.3s}
+.pack:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.22)}
+.pack.hot{border:1px solid transparent;background:linear-gradient(var(--bg2),var(--bg2)) padding-box,var(--grad) border-box;position:relative;box-shadow:0 0 60px rgba(139,124,255,.16)}
+.pack.hot:hover{box-shadow:0 0 80px rgba(139,124,255,.3)}
+.badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--grad);color:#0a0a14;font-size:.74rem;font-weight:800;padding:5px 16px;border-radius:99px;white-space:nowrap;letter-spacing:.06em}
+.pack h3{font-size:1.15rem;font-weight:700}
+.pack .p{font-size:1.9rem;font-weight:800;margin:10px 0 18px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pack ul{list-style:none;margin-bottom:26px;flex:1}
+.pack li{padding:8px 0;color:var(--mut);font-size:.92rem;border-bottom:1px dashed var(--line)}
+.pack li::before{content:"✓ ";color:var(--acc2);font-weight:700}
+.pack .btn{width:100%}
+.pack-note{text-align:center;color:var(--mut);margin-top:30px;font-size:.9rem;max-width:760px;margin-left:auto;margin-right:auto}
+
+/* ---------- PROCESS ---------- */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:22px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;position:relative;transition:.3s}
+.step:hover{transform:translateY(-5px);border-color:rgba(45,212,191,.4)}
+.step .n{width:44px;height:44px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-weight:800;color:#0a0a14;font-family:'Sora',sans-serif;margin-bottom:16px;box-shadow:0 0 20px rgba(139,124,255,.35)}
+.step h3{font-size:1.02rem;font-weight:700;margin-bottom:6px}
+.step p{color:var(--mut);font-size:.9rem}
+
+/* ---------- WHY / STATS ---------- */
+.wgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.wcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 22px;text-align:center;transition:.3s}
+.wcard:hover{transform:translateY(-5px);border-color:rgba(139,124,255,.45)}
+.wcard .em{font-size:1.7rem;display:block;margin-bottom:8px}
+.wcard b{display:block;font-size:1.02rem;margin-bottom:6px;font-family:'Sora',sans-serif}
+.wcard span{color:var(--mut);font-size:.88rem}
+
+/* ---------- ABOUT ---------- */
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:44px;align-items:center}
 .about .logo-big{text-align:center}
-.about .logo-big .logo{width:130px;height:130px}
-.about p{color:var(--mut);margin-bottom:14px;font-size:.97rem}
+.about .logo-big .logo{width:150px;height:150px;filter:drop-shadow(0 0 30px rgba(139,124,255,.5))}
+.about p{color:var(--mut);margin-bottom:15px;font-size:.97rem}
 .about b{color:var(--txt)}
-.contact form{max-width:520px;margin:34px auto 0;text-align:left;background:var(--card);border:1px solid #232a44;border-radius:14px;padding:26px}
-.contact label{display:block;font-weight:600;margin:14px 0 6px;font-size:.92rem}
-.contact input,.contact select,.contact textarea{width:100%;padding:12px;border:1px solid #39406a;border-radius:8px;font-size:.95rem;background:var(--card2);color:var(--txt)}
-.contact .btn{width:100%;margin-top:20px}
-.thanks{display:none;text-align:center;color:var(--acc2);font-weight:700;margin-top:22px}
-.contact{background:radial-gradient(ellipse 70% 80% at 50% 120%,rgba(108,92,231,.2),transparent)}
-.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:36px}
-.ccard{background:var(--card);border:1px solid #232a44;border-radius:14px;padding:30px;text-align:center;text-decoration:none;color:var(--txt);transition:.25s}
-.ccard:hover{border-color:var(--acc2);transform:translateY(-4px)}
-.ccard .ic{margin:0 auto 14px}
+.about .promise{color:var(--acc2);font-weight:600}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:760px;margin:0 auto}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin-bottom:13px;transition:.25s}
+details[open]{border-color:rgba(139,124,255,.45);background:var(--card2)}
+details summary{font-weight:600;cursor:pointer;font-size:.98rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:'Sora',sans-serif}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";color:var(--acc2);font-size:1.3rem;font-weight:400;flex:none;transition:.25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mut);margin-top:12px;font-size:.93rem}
+
+/* ---------- CONTACT ---------- */
+.contact{background:radial-gradient(ellipse 70% 80% at 50% 120%,rgba(139,124,255,.13),transparent)}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:44px}
+.ccard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px;text-align:center;text-decoration:none;color:var(--txt);transition:.3s}
+.ccard:hover{border-color:rgba(45,212,191,.5);transform:translateY(-5px)}
+.ccard .ic{margin:0 auto 16px}
 .ccard p{color:var(--mut);font-size:.9rem}
 .ccard b{font-size:1.02rem;word-break:break-all}
-footer{border-top:1px solid #232a44;padding:30px 0;text-align:center;color:var(--mut);font-size:.88rem}
-@media(max-width:640px){.navlinks{display:none}}
+.contact form{max-width:540px;margin:40px auto 0;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:32px}
+.contact label{display:block;font-weight:600;margin:16px 0 7px;font-size:.9rem}
+.contact input,.contact select,.contact textarea{width:100%;padding:13px 15px;border:1px solid rgba(255,255,255,.14);border-radius:10px;font-size:.95rem;background:rgba(255,255,255,.04);color:var(--txt);transition:.2s;font-family:inherit}
+.contact input:focus,.contact select:focus,.contact textarea:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px rgba(139,124,255,.18)}
+.contact .btn{width:100%;margin-top:22px}
+.thanks{display:none;text-align:center;color:var(--acc2);font-weight:700;margin-top:22px}
+
+/* ---------- FOOTER + FAB ---------- */
+footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;color:var(--mut);font-size:.88rem}
+.fab{position:fixed;bottom:22px;right:22px;width:56px;height:56px;border-radius:50%;background:#22c55e;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(34,197,94,.45);z-index:60;transition:.25s;text-decoration:none}
+.fab:hover{transform:scale(1.1)}
+.fab svg{width:28px;height:28px;fill:#fff}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}header::before,header::after{animation:none}}
+@media(max-width:640px){.navlinks{display:none}.trust-row{gap:8px}.chip{padding:7px 13px;font-size:.8rem}}
 </style>
 </head>
 <body>
-<nav><div class="nav-in">
-<a class="brand" href="#"><svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6c5ce7"/><stop offset="1" stop-color="#00cec9"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="14" fill="#131729" stroke="url(#g)" stroke-width="2.5"/><path d="M14 40c2 3 5 4 8 4 4 0 7-2 7-5 0-3-2.5-4.5-7-5.5-4.5-1-7-2.5-7-5.5 0-3 2.5-5 6-5 3 0 5.5 1 7.5 3.2" fill="none" stroke="url(#g)" stroke-width="3.4" stroke-linecap="round"/><circle cx="46" cy="21" r="3.6" fill="url(#g)"/><path d="M46 29v8c0 5-3 8-8.5 8" fill="none" stroke="url(#g)" stroke-width="3.4" stroke-linecap="round"/></svg><b>SB <i>AI</i> STUDIO</b></a>
-<div class="navlinks"><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#packages">Packages</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+<nav id="nav"><div class="nav-in">
+<a class="brand" href="#"><svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#2dd4bf"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="14" fill="#0b0f1c" stroke="url(#g)" stroke-width="2.5"/><path d="M14 40c2 3 5 4 8 4 4 0 7-2 7-5 0-3-2.5-4.5-7-5.5-4.5-1-7-2.5-7-5.5 0-3 2.5-5 6-5 3 0 5.5 1 7.5 3.2" fill="none" stroke="url(#g)" stroke-width="3.4" stroke-linecap="round"/><circle cx="46" cy="21" r="3.6" fill="url(#g)"/><path d="M46 29v8c0 5-3 8-8.5 8" fill="none" stroke="url(#g)" stroke-width="3.4" stroke-linecap="round"/></svg><b>SB <i>AI</i> STUDIO</b></a>
+<div class="navlinks"><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#packages">Packages</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact" class="navcta">Contact →</a></div>
 </div></nav>
 
 <header><div class="wrap">
+<div class="eyebrow"><span class="dot"></span> Free Demo • No Obligation • Money-Back Guarantee</div>
 <h1>Websites &amp; AI Solutions<br>That <span class="hl">Grow Your Business</span></h1>
 <p class="sub">SB AI Studio is your one-stop digital partner — beautiful websites, 24/7 AI chat assistants, booking systems, business automation and more. Affordable, done-for-you, with a free no-obligation demo.</p>
 <div class="cta-row">
 <a class="btn btn-grad" href="https://wa.me/8801324997271?text=Hi%20SB%20AI%20Studio!%20I%27d%20like%20a%20free%20demo." target="_blank" rel="noopener">Get a Free Demo</a>
 <a class="btn btn-out" href="#portfolio">See Live Demos</a>
 </div>
+<div class="trust-row">
+<span class="chip"><b>9</b> expert services</span>
+<span class="chip"><b>4</b> clear packages</span>
+<span class="chip"><b>24h</b> reply guarantee</span>
+<span class="chip"><b>$0</b> demo — pay only if you love it</span>
+</div>
 </div></header>
 
 <section id="services"><div class="wrap">
-<div class="sec-title">What We Do</div>
-<div class="sec-sub">Nine services, one team — everything your business needs to win online.</div>
+<span class="eyebrow-cap reveal">What We Do</span>
+<div class="sec-title reveal">Nine Services, One Team</div>
+<div class="sec-sub reveal">Everything your business needs to win online — designed, built and maintained by one dedicated team.</div>
 <div class="grid">
-<div class="card"><div class="ic">🌐</div><h3>Website Development</h3><p>Fast, modern, mobile-friendly websites for restaurants, salons, shops, clinics and every small business. Online ordering, booking and contact forms built in.</p><div class="price">From $399 per project</div></div>
-<div class="card"><div class="ic">🤖</div><h3>AI Chat Assistant</h3><p>A 24/7 AI assistant on your website that answers customer questions, takes bookings and captures leads — even while you sleep.</p><div class="price">From $299 setup</div></div>
-<div class="card"><div class="ic">⚙️</div><h3>Business Automation</h3><p>Email notifications, lead capture, appointment reminders and follow-ups — automated, so nothing slips through the cracks.</p><div class="price">Setup + monthly support</div></div>
-<div class="card"><div class="ic">💬</div><h3>Telegram &amp; Business Bots</h3><p>Custom bots for FAQs, lead collection, order requests and customer notifications. Built on our own proven platform.</p><div class="price">From $199 setup</div></div>
-<div class="card"><div class="ic">📍</div><h3>Local Digital Setup</h3><p>Google Business Profile setup &amp; optimization, online menus, booking pages and contact forms — get found by local customers.</p><div class="price">From $99 one-time</div></div>
-<div class="card"><div class="ic">🎨</div><h3>Content &amp; Product Listing</h3><p>Social media posts, promotional graphics, product uploads and online catalogs that keep your brand looking sharp.</p><div class="price">From $99/month</div></div>
-<div class="card"><div class="ic">📊</div><h3>CRM &amp; Lead Management</h3><p>Every customer, lead and follow-up in one place — lead capture, pipeline tracking, automated reminders and a simple dashboard so no sale is ever forgotten.</p><div class="price">From $299 setup + $49/month</div></div>
-<div class="card"><div class="ic">🛒</div><h3>E-commerce Operations</h3><p>Product listings, order tracking, inventory alerts and an admin dashboard — a proper online shop your customers can actually buy from.</p><div class="price">From $599 setup + $49/month</div></div>
-<div class="card"><div class="ic">🛡️</div><h3>Website Maintenance &amp; Monitoring</h3><p>Bug fixes, updates, backups, uptime and performance monitoring. We watch your site 24/7 so problems are fixed before you even notice.</p><div class="price">From $49/month</div></div>
+<div class="card reveal"><div class="ic">🌐</div><h3>Website Development</h3><p>Fast, modern, mobile-friendly websites for restaurants, salons, shops, clinics and every small business. Online ordering, booking and contact forms built in.</p><div class="price">From $399 per project</div></div>
+<div class="card reveal"><div class="ic">🤖</div><h3>AI Chat Assistants</h3><p>A 24/7 chat assistant on your website that answers customer questions instantly — hours, prices, availability — and captures leads while you sleep.</p><div class="price">From $299 setup</div></div>
+<div class="card reveal"><div class="ic">⚙️</div><h3>Business Automation</h3><p>Email notifications, lead capture, appointment reminders and follow-ups that run on autopilot — so no customer ever slips through the cracks.</p><div class="price">From $199 setup</div></div>
+<div class="card reveal"><div class="ic">💬</div><h3>Telegram &amp; Business Bots</h3><p>Custom bots for FAQs, lead collection, order requests and customer notifications. Built on our own proven platform.</p><div class="price">From $199 setup</div></div>
+<div class="card reveal"><div class="ic">📍</div><h3>Local Digital Setup</h3><p>Google Business Profile setup &amp; optimization, online menus, booking pages and contact forms — get found by local customers.</p><div class="price">From $99 one-time</div></div>
+<div class="card reveal"><div class="ic">🎨</div><h3>Content &amp; Product Listing</h3><p>Social media posts, promotional graphics, product uploads and online catalogs that keep your brand looking sharp.</p><div class="price">From $99/month</div></div>
+<div class="card reveal"><div class="ic">📊</div><h3>CRM &amp; Lead Management</h3><p>Every customer, lead and follow-up in one place — lead capture, pipeline tracking, automated reminders and a simple dashboard so no sale is ever forgotten.</p><div class="price">From $299 setup + $49/month</div></div>
+<div class="card reveal"><div class="ic">🛒</div><h3>E-commerce Operations</h3><p>Product listings, order tracking, inventory alerts and an admin dashboard — a proper online shop your customers can actually buy from.</p><div class="price">From $599 setup + $49/month</div></div>
+<div class="card reveal"><div class="ic">🛡️</div><h3>Website Maintenance &amp; Monitoring</h3><p>Bug fixes, updates, backups, uptime and performance monitoring. We watch your site 24/7 so problems are fixed before you even notice.</p><div class="price">From $49/month</div></div>
 </div>
 </div></section>
 
-<section id="portfolio" style="background:var(--card2)"><div class="wrap">
-<div class="sec-title">Our Work — Live Demo Websites</div>
-<div class="sec-sub">These are fully working demo sites we built. Yours will be designed for YOUR business — free, before you pay anything.</div>
+<section id="portfolio" style="background:var(--bg2)"><div class="wrap">
+<span class="eyebrow-cap reveal">Portfolio</span>
+<div class="sec-title reveal">See It Before You Buy It</div>
+<div class="sec-sub reveal">Fully working demo sites we built to show our style. Yours would be custom-made for your business — free.</div>
 <div class="pgrid">
-<a class="pcard" href="demo-restaurant.html"><div class="pview pv1">🥐🎂🥖</div><div class="pbody"><h3>Sunrise Bakery</h3><p>Online menu, quick order form, 20-minute pickup flow — built for a neighborhood bakery.</p><div class="ptag">DEMO PROJECT — Restaurant / Ordering</div></div></a>
-<a class="pcard" href="demo-salon.html"><div class="pview pv2">💅✨💇‍♀️</div><div class="pbody"><h3>Glow Beauty Salon</h3><p>Service list with prices, real-time appointment booking, instant email confirmation.</p><div class="ptag">DEMO PROJECT — Salon / Booking</div></div></a>
+<a class="pcard reveal" href="demo-restaurant.html"><div class="pview pv1">🥐🎂🥖</div><div class="pbody"><h3>Sunrise Bakery</h3><p>Online menu, quick order form, 20-minute pickup flow — built for a neighborhood bakery.</p><div class="ptag">DEMO PROJECT — Restaurant / Ordering</div></div></a>
+<a class="pcard reveal" href="demo-salon.html"><div class="pview pv2">💅💇✨</div><div class="pbody"><h3>Glow Beauty Salon</h3><p>Instant online booking, service menu and price list — built for a modern salon.</p><div class="ptag">DEMO PROJECT — Salon / Booking</div></div></a>
 </div>
-<p style="text-align:center;color:var(--mut);margin-top:28px;font-size:.93rem">Want to see a free demo of <b>your</b> business? <a href="https://wa.me/8801324997271?text=Show%20me%20a%20free%20demo%20of%20my%20business!" style="color:var(--acc2)" target="_blank" rel="noopener">Just ask on WhatsApp →</a></p>
+<p class="pack-note reveal">Want to see a free demo of <b>your</b> business? <a href="https://wa.me/8801324997271?text=Show%20me%20a%20free%20demo%20of%20my%20business!" style="color:var(--acc2)" target="_blank" rel="noopener">Just ask on WhatsApp →</a></p>
 </div></section>
 
 <section id="packages"><div class="wrap">
-<div class="sec-title">Simple Packages</div>
-<div class="sec-sub">Pick what fits — every package starts with a free demo of your future website.</div>
+<span class="eyebrow-cap reveal">Pricing</span>
+<div class="sec-title reveal">Simple Packages</div>
+<div class="sec-sub reveal">Pick what fits — every package starts with a free demo of your future website.</div>
 <div class="packs">
-<div class="pack"><h3>Starter</h3><div class="p">$399+</div>
+<div class="pack reveal"><h3>Starter</h3><div class="p">$399+</div>
 <ul><li>Professional business website</li><li>Mobile-friendly design</li><li>Contact form</li><li>Free hosting guidance</li></ul>
 <a class="btn btn-out" href="#contact">Start Now</a></div>
-<div class="pack"><h3>Growth</h3><div class="p">$599+</div>
+<div class="pack reveal"><h3>Growth</h3><div class="p">$599+</div>
 <ul><li>Everything in Starter</li><li>Online booking / ordering</li><li>Lead collection system</li><li>Email notifications</li></ul>
 <a class="btn btn-out" href="#contact">Start Now</a></div>
-<div class="pack hot"><div class="badge">MOST POPULAR</div><h3>Automation</h3><div class="p">$899+</div>
+<div class="pack hot reveal"><div class="badge">MOST POPULAR</div><h3>Automation</h3><div class="p">$899+</div>
 <ul><li>Everything in Growth</li><li>AI chat assistant 24/7</li><li>Workflow automation</li><li>Follow-up sequences</li></ul>
 <a class="btn btn-grad" href="#contact">Start Now</a></div>
-<div class="pack"><h3>Complete</h3><div class="p">$1,299+</div>
+<div class="pack reveal"><h3>Complete</h3><div class="p">$1,299+</div>
 <ul><li>Everything in Automation</li><li>Google Business Profile</li><li>Social media starter pack</li><li>3 months ongoing support</li></ul>
 <a class="btn btn-out" href="#contact">Start Now</a></div>
 </div>
-<p style="text-align:center;color:var(--mut);margin-top:26px;font-size:.9rem">All packages: unlimited revisions until you approve • 50% advance, 50% on delivery • Domain (~$10-15/yr) and hosting billed to you at our partner discount — no markup from us. Optional maintenance from $49/mo, cancel anytime.</p>
+<p class="pack-note reveal">All packages: unlimited revisions until you approve • 50% advance, 50% on delivery • Domain (~$10-15/yr) and hosting billed to you at our partner discount — no markup from us. Optional maintenance from $49/mo, cancel anytime.</p>
 </div></section>
 
-<section id="process"><div class="wrap">
-<div class="sec-title">How We Work</div>
-<div class="sec-sub">From first message to live website — in four simple steps.</div>
+<section id="process" style="background:var(--bg2)"><div class="wrap">
+<span class="eyebrow-cap reveal">The Process</span>
+<div class="sec-title reveal">How We Work</div>
+<div class="sec-sub reveal">From first message to live website — in four simple steps.</div>
 <div class="steps">
-<div class="step"><div class="n">1</div><h3>Tell Us About You</h3><p>One short message on WhatsApp or email. We'll look at your business and current website.</p></div>
-<div class="step"><div class="n">2</div><h3>Free Demo in Days</h3><p>We build a working demo of YOUR website — logo, menu, booking, whatever you need. Zero cost, zero obligation.</p></div>
-<div class="step"><div class="n">3</div><h3>You Approve &amp; Pay 50%</h3><p>Love the demo? We finish everything, connect your domain and make it live.</p></div>
-<div class="step"><div class="n">4</div><h3>Go Live &amp; Grow</h3><p>Final payment, handover with training, and optional monthly care so you never worry about tech.</p></div>
+<div class="step reveal"><div class="n">1</div><h3>Tell Us About You</h3><p>One short message on WhatsApp or email. We'll look at your business and current website.</p></div>
+<div class="step reveal"><div class="n">2</div><h3>Free Demo in Days</h3><p>We build a working demo of YOUR website — logo, menu, booking, whatever you need. Zero cost, zero obligation.</p></div>
+<div class="step reveal"><div class="n">3</div><h3>You Approve &amp; Pay 50%</h3><p>Love the demo? We finish everything, connect your domain and make it live.</p></div>
+<div class="step reveal"><div class="n">4</div><h3>Go Live &amp; Grow</h3><p>Final payment, handover with training, and optional monthly care so you never worry about tech.</p></div>
 </div>
 </div></section>
 
-<section id="about" style="background:var(--card2)"><div class="wrap">
-<div class="sec-title">About SB AI Studio</div>
-<div class="sec-sub">A modern digital studio built for one mission: small businesses deserve big-business websites.</div>
+<section id="about"><div class="wrap">
+<span class="eyebrow-cap reveal">About Us</span>
+<div class="sec-title reveal">About SB AI Studio</div>
+<div class="sec-sub reveal">A modern digital studio built for one mission: small businesses deserve big-business websites.</div>
 <div class="about">
-<div class="logo-big"><svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6c5ce7"/><stop offset="1" stop-color="#00cec9"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="14" fill="#131729" stroke="url(#g2)" stroke-width="2.5"/><path d="M14 40c2 3 5 4 8 4 4 0 7-2 7-5 0-3-2.5-4.5-7-5.5-4.5-1-7-2.5-7-5.5 0-3 2.5-5 6-5 3 0 5.5 1 7.5 3.2" fill="none" stroke="url(#g2)" stroke-width="3.4" stroke-linecap="round"/><circle cx="46" cy="21" r="3.6" fill="url(#g2)"/><path d="M46 29v8c0 5-3 8-8.5 8" fill="none" stroke="url(#g2)" stroke-width="3.4" stroke-linecap="round"/></svg></div>
-<div>
+<div class="logo-big reveal"><svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b7cff"/><stop offset="1" stop-color="#2dd4bf"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="14" fill="#0b0f1c" stroke="url(#g2)" stroke-width="2.5"/><path d="M14 40c2 3 5 4 8 4 4 0 7-2 7-5 0-3-2.5-4.5-7-5.5-4.5-1-7-2.5-7-5.5 0-3 2.5-5 6-5 3 0 5.5 1 7.5 3.2" fill="none" stroke="url(#g2)" stroke-width="3.4" stroke-linecap="round"/><circle cx="46" cy="21" r="3.6" fill="url(#g2)"/><path d="M46 29v8c0 5-3 8-8.5 8" fill="none" stroke="url(#g2)" stroke-width="3.4" stroke-linecap="round"/></svg></div>
+<div class="reveal">
 <p><b>We're SB AI Studio</b> — an independent digital studio founded by Selim SB. We saw too many great local businesses losing customers to competitors with better websites, so we set out to fix that: <b>affordable, done-for-you digital work, delivered fast, with no surprises.</b></p>
 <p>Every project starts with a <b>free, no-obligation demo</b> — because we'd rather show than tell. We combine smart AI tooling with careful hand-crafting, which keeps our prices low and our delivery quick. Websites, AI chat assistants, booking systems, automation, Google Business Profile — one team, one point of contact.</p>
-<p style="color:var(--acc2);font-weight:600">Our promise: if you don't love the demo, you pay nothing.</p>
+<p class="promise">Our promise: if you don't love the demo, you pay nothing.</p>
 </div>
 </div>
 </div></section>
 
-<section id="why"><div class="wrap">
-<div class="sec-title">Why Businesses Choose Us</div>
+<section id="why" style="background:var(--bg2)"><div class="wrap">
+<span class="eyebrow-cap reveal">Why Us</span>
+<div class="sec-title reveal">Why Businesses Choose Us</div>
 <div class="wgrid">
-<div class="wcard">🎁<b>Free Demo First</b><span>We build a demo of YOUR website before you pay anything. You only pay if you love it.</span></div>
-<div class="wcard">💰<b>Honest Pricing</b><span>Transparent packages. No hidden fees — and hosting discounts through our partners.</span></div>
-<div class="wcard">⚡<b>Fast Delivery</b><span>Most websites go live within days, not weeks. Revisions included until you're happy.</span></div>
-<div class="wcard">🛠️<b>One Team, All Services</b><span>Website, chatbot, automation, Google profile — one team handles everything.</span></div>
+<div class="wcard reveal"><span class="em">🎁</span><b>Free Demo First</b><span>We build a demo of YOUR website before you pay anything. You only pay if you love it.</span></div>
+<div class="wcard reveal"><span class="em">💰</span><b>Honest Pricing</b><span>Transparent packages. No hidden fees — and hosting discounts through our partners.</span></div>
+<div class="wcard reveal"><span class="em">⚡</span><b>Fast Delivery</b><span>Most websites go live within days, not weeks. Revisions included until you're happy.</span></div>
+<div class="wcard reveal"><span class="em">🛠️</span><b>One Team, All Services</b><span>Website, chatbot, automation, Google profile — one team handles everything.</span></div>
 </div>
 </div></section>
 
 <section id="faq"><div class="wrap">
-<div class="sec-title">Frequently Asked Questions</div>
-<div class="sec-sub">Straight answers, no fine print.</div>
+<span class="eyebrow-cap reveal">FAQ</span>
+<div class="sec-title reveal">Frequently Asked Questions</div>
+<div class="sec-sub reveal">Straight answers, no fine print.</div>
 <div class="faq">
-<details><summary>Is the demo really free?</summary><p>Yes — 100% free with no obligation. We build a working demo of your future website, you look at it, and only decide after. If you don't like it, you owe nothing.</p></details>
-<details><summary>How fast can my website go live?</summary><p>Most sites are live within 5–10 days of your approval. Simple sites can be faster — we'll give you an exact timeline with the demo.</p></details>
-<details><summary>Do I need my own hosting and domain?</summary><p>We handle everything, including recommending reliable hosting with a discount through our partners. You can use your existing domain or we'll register one for you.</p></details>
-<details><summary>What if I already have a website?</summary><p>Perfect — we audit it for free, show you exactly what's missing (mobile issues, no booking, no chat), and upgrade it without losing your content.</p></details>
-<details><summary>What exactly is and isn't included in a package?</summary><p>Every package includes design, build, launch and unlimited revisions until you approve. Domain registration (~$10-15/yr) and hosting are billed directly to you at our partner discount — we add no markup and never charge hidden fees. Content writing for your pages is included; paid stock photography is not.</p></details>
-<details><summary>Are the portfolio sites real clients?</summary><p>Our portfolio shows fully working DEMO PROJECTS we built to demonstrate our style. Real client projects are added here as they go live — we never show fake reviews or invented results.</p></details>
-<details><summary>Are free tools really enough? What are the limits?</summary><p>We're upfront: free hosting and free tools have limits (storage, custom domains, advanced features). Where a free plan is enough, we use it and tell you its limits. Where your business needs more, we'll recommend a paid option — you pay the provider directly at the listed price, we never add markup. You'll always know what things cost and why.</p></details>
-<details><summary>What's included in maintenance?</summary><p>Content updates, security, backups, small changes and priority support — from $49/month. Optional, cancel anytime.</p></details>
+<details class="reveal"><summary>Is the demo really free?</summary><p>Yes — 100% free with no obligation. We build a working demo of your future website, you look at it, and only decide after. If you don't like it, you owe nothing.</p></details>
+<details class="reveal"><summary>How fast can my website go live?</summary><p>Most sites are live within 5–10 days of your approval. Simple sites can be faster — we'll give you an exact timeline with the demo.</p></details>
+<details class="reveal"><summary>Do I need my own hosting and domain?</summary><p>We handle everything, including recommending reliable hosting with a discount through our partners. You can use your existing domain or we'll register one for you.</p></details>
+<details class="reveal"><summary>What if I already have a website?</summary><p>Perfect — we audit it for free, show you exactly what's missing (mobile issues, no booking, no chat), and upgrade it without losing your content.</p></details>
+<details class="reveal"><summary>What exactly is and isn't included in a package?</summary><p>Every package includes design, build, launch and unlimited revisions until you approve. Domain registration (~$10-15/yr) and hosting are billed directly to you at our partner discount — we add no markup and never charge hidden fees. Content writing for your pages is included; paid stock photography is not.</p></details>
+<details class="reveal"><summary>Are the portfolio sites real clients?</summary><p>Our portfolio shows fully working DEMO PROJECTS we built to demonstrate our style. Real client projects are added here as they go live — we never show fake reviews or invented results.</p></details>
+<details class="reveal"><summary>Are free tools really enough? What are the limits?</summary><p>We're upfront: free hosting and free tools have limits (storage, custom domains, advanced features). Where a free plan is enough, we use it and tell you its limits. Where your business needs more, we'll recommend a paid option — you pay the provider directly at the listed price, we never add markup. You'll always know what things cost and why.</p></details>
+<details class="reveal"><summary>What's included in maintenance?</summary><p>Content updates, security, backups, small changes and priority support — from $49/month. Optional, cancel anytime.</p></details>
 </div>
 </div></section>
 
 <section id="contact" class="contact"><div class="wrap">
-<div class="sec-title">Let's Talk</div>
-<div class="sec-sub">Working hours: 9:00 – 23:00 (GMT+6), serving clients worldwide. WhatsApp or Telegram replies within a few hours, all messages answered within 24 hours.</div>
+<span class="eyebrow-cap reveal">Get In Touch</span>
+<div class="sec-title reveal">Let's Talk</div>
+<div class="sec-sub reveal">Working hours: 9:00 – 23:00 (GMT+6), serving clients worldwide. WhatsApp or Telegram replies within a few hours, all messages answered within 24 hours.</div>
 <div class="cgrid">
-<a class="ccard" href="https://wa.me/8801324997271?text=Hi%20SB%20AI%20Studio!" target="_blank" rel="noopener"><div class="ic">🟢</div><b>WhatsApp</b><p>+880 1324-997271</p><p style="color:var(--acc2)">Tap to chat instantly →</p></a>
-<a class="ccard" href="https://t.me/bdadmin69x" target="_blank" rel="noopener"><div class="ic">✈️</div><b>Telegram</b><p>@bdadmin69x</p><p style="color:var(--acc2)">Message us on Telegram →</p></a>
-<a class="ccard" href="mailto:selimsb645@gmail.com?subject=Project%20Inquiry%20-%20SB%20AI%20Studio"><div class="ic">✉️</div><b>Email</b><p>selimsb645@gmail.com</p><p style="color:var(--acc2)">Send us an email →</p></a>
+<a class="ccard reveal" href="https://wa.me/8801324997271?text=Hi%20SB%20AI%20Studio!" target="_blank" rel="noopener"><div class="ic">🟢</div><b>WhatsApp</b><p>+880 1324-997271</p><p style="color:var(--acc2)">Tap to chat instantly →</p></a>
+<a class="ccard reveal" href="https://t.me/bdadmin69x" target="_blank" rel="noopener"><div class="ic">✈️</div><b>Telegram</b><p>@bdadmin69x</p><p style="color:var(--acc2)">Message us on Telegram →</p></a>
+<a class="ccard reveal" href="mailto:selimsb645@gmail.com?subject=Project%20Inquiry%20-%20SB%20AI%20Studio"><div class="ic">✉️</div><b>Email</b><p>selimsb645@gmail.com</p><p style="color:var(--acc2)">Send us an email →</p></a>
 </div>
-<form id="cform">
+<form id="cform" class="reveal">
 <input type="text" name="company" style="display:none" tabindex="-1" autocomplete="off">
 <label>Your name</label><input name="name" required placeholder="Jane Smith">
 <label>Email</label><input type="email" name="email" required placeholder="jane@email.com">
@@ -230,9 +318,12 @@ footer{border-top:1px solid #232a44;padding:30px 0;text-align:center;color:var(-
 </div></section>
 
 <footer><div class="wrap">
-<b>SB AI STUDIO</b> — Web Development • AI Automation • Business Solutions<br>
+<b style="font-family:'Sora',sans-serif">SB AI STUDIO</b> — Web Development • AI Automation • Business Solutions<br>
 © 2026 SB AI Studio. Websites, AI assistants &amp; digital growth for small businesses worldwide.
 </div></footer>
+
+<a class="fab" href="https://wa.me/8801324997271?text=Hi%20SB%20AI%20Studio!%20I%27d%20like%20a%20free%20demo." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.6.8 5 2.3 7L4 29l7.2-2.2c1.9 1 4 1.6 6.3 1.6h.5c6.6 0 12-5.4 12-12S22.6 3 16 3zm7 17c-.3.9-1.8 1.7-2.5 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.2-1.4-1.9-1.4-3.6 0-1.7.9-2.5 1.2-2.9.3-.3.7-.4.9-.4h.6c.2 0 .5 0 .7.5l1 2.3c.1.3.2.5 0 .8l-.5.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.8 1.5 1.4 2.8 1.8 3.2 2 .4.2.6.2.9-.1l1.2-1.4c.3-.3.5-.2.9-.1l2 1c.4.2.6.3.7.5.1.2.1 1-.2 1.9z"/></svg></a>
+
 <script>
 function fallback(){
   var f = document.getElementById('cform');
@@ -254,6 +345,9 @@ document.getElementById('cform').addEventListener('submit', async function(e){
   } catch(err) { fallback(); }
   btn.disabled = false; btn.textContent = 'Send Inquiry';
 });
+window.addEventListener('scroll', function(){ document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10); }, {passive:true});
+var io = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el, i){ el.style.transitionDelay = (i % 3) * 90 + 'ms'; io.observe(el); });
 </script>
 </body>
 </html>
